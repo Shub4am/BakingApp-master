@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ PROJECT LICENSE
+  ~
+  ~ This project was submitted byShubham Prakash as part of the Android Developer Nanodegree At Udacity.
+  ~
+  ~ As part of Udacity Honor code, your submissions must be your own work, hence
+  ~ submitting this project as yours will cause you to break the Udacity Honor Code
+  ~ and the suspension of your account.
+  ~
+  ~ Me, the author of the project, allow you to check the code as a reference, but if
+  ~ you submit it, it's your own responsibility if you get expelled.
+  ~
+  ~ Copyright (c) 2018 Shubham Prakash
+  ~
+  ~ Besides the above notice, the following license applies and this license notice
+  ~ must be included in all works derived from this project.
+  ~
+  ~ MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nanodegree.udacity.bakingApp.Fragment.StepDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/step_video_player"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/exo_player_height"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/step_exo_player_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/exo_player_height"
+                android:contentDescription="@string/content_description_step_exo_player_thumbnail"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/step_description"
+            style="@style/Text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size16" />
+    </LinearLayout>
+
+</ScrollView>
